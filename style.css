@@ -22,8 +22,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -63,9 +63,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-    scroll-behavior: auto;
+   scroll-behavior: auto;
   }
-
+  
   *,
   *::before,
   *::after {
@@ -76,193 +76,187 @@ select {
   }
 }
 
+
 /* GENERAL STYLING */
 :root {
-  --paper-blue: hsl(200, 81%, 75%);
-  --paper-pink: hsl(325, 85%, 87%);
-  --pink-shadow: hsla(323, 12%, 21%, 0.25);
-  --shadow-paper: rgba(0, 0, 0, 0.25);
-  --path1: polygon(0px 1px, 101.07% -5px, 100.34% 93.66%, 0% 100%);
-  --path2: polygon(0px 0px, 100.66% 5px, 102.67% 104.28%, 0.67% 95.71%);
-}
+    --paper-blue: hsl(200, 81%, 75%);
+    --paper-pink: hsl(325, 85%, 87%);
+    --pink-shadow: hsla(323, 12%, 21%, .25);
+    --shadow-paper: rgba(0, 0, 0, .25);
+    --path1: polygon(0px 1px, 101.07% -5px, 100.34% 93.66%, 0% 100%);
+    --path2: polygon(0px 0px, 100.66% 5px, 102.67% 104.28%, 0.67% 95.71%)
 
-@font-face {
-  font-family: "Museo Sans";
-  src: url("../Temporary-website/assets/fonts/MuseoSansThin.otf");
-}
-
-@font-face {
-  font-family: "Museo Sans Bold";
-  src: url("../Temporary-website/assets/fonts/MuseoSans.otf");
-}
-
-body {
-  font-size: 1.25rem;
-  font-family: "Museo Sans";
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Museo Sans Bold";
 }
 
 /* UTILITY */
 .paperwrapper {
-  margin: 1.5rem;
+    margin: 1.5rem;
 }
 .paper {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border: 1px #333 dashed;
-  position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px #333 dashed;
+    position: relative;
 }
 
 .paper::after {
-  content: "";
-  position: absolute;
-  inset: -3px -5px -5px 0;
-  background-color: #fff;
-  z-index: -1;
+    content: '';
+    position: absolute;
+    inset: -3px -5px -5px 0;
+    background-color: #fff;
+    z-index: -1;
 }
 
 .paperwrapper__clip1 {
-  display: inline-block;
-  clip-path: var(--path1);
+    display: inline-block;
+    clip-path: var(--path1);
 }
 
 .paperwrapper__clip2 {
-  display: inline-block;
-  clip-path: var(--path2);
+    display: inline-block;
+    clip-path: var(--path2);
 }
 
 .paperwrapper__shadow {
-  display: inline-block;
-  filter: drop-shadow(5px 5px 10px var(--pink-shadow));
+    display: inline-block;
+    filter: drop-shadow(5px 5px 10px var(--pink-shadow));
 }
 
 /* PAGE STYLING */
 .container {
-  margin-top: 3rem;
-  padding-inline: 10rem;
-  padding-block: 5rem;
-  max-width: 67.5rem;
-  display: grid;
-  grid-auto-rows: auto;
-  align-items: center;
-  justify-content: center;
-  margin-inline: auto;
-  background-color: var(--paper-blue);
-  grid-template-columns: repeat(2, 1fr);
-  filter: drop-shadow(10px 10px 20px var(--shadow-paper));
-  rotate: (2deg);
-  position: relative;
+margin-top: 3rem;
+padding-inline: 10rem;
+padding-block: 5rem;
+max-width: 67.5rem;
+display: grid;
+grid-auto-rows: auto;
+align-items:  center;
+justify-content: center;
+margin-inline: auto;
+background-color: var(--paper-blue);
+grid-template-columns: repeat(2, 1fr);
+filter: drop-shadow(10px 10px 20px var(--shadow-paper));
+rotate: (2deg);
+position: relative;
 }
 
 @media screen and (max-width: 50rem) {
-  .container {
-    display: block;
-    margin-top: 0;
-    padding: 1rem;
-  }
-
-  .logo {
-    margin: auto;
-  }
+    .container {
+        display: block;
+        margin-top: 0;
+        padding: 1rem;
+    }
+    
+    .logo {
+        margin: auto;
+    }
 }
 
 /* HERO SECTION */
 
 .hero-section {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 .page-title {
-  background-color: var(--paper-pink);
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
-  width: max-content;
+    background-color: var(--paper-pink);    
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    width: max-content;
 }
 
 .page-subtitle {
-  font-size: clamp(1rem, 3vw, 2rem);
-  width: max-content;
+    font-size: clamp(1rem, 3vw, 2rem);
+    width: max-content;
 }
 
 .logo {
-  filter: drop-shadow(7px 7px 20px rgba(0, 0, 0, 0.4));
-  rotate: -10deg;
-  width: clamp(10rem, 15rem + 5vw, 25rem);
-  min-width: 10rem;
+    filter: drop-shadow(7px 7px 20px rgba(0,0,0,.4));
+    rotate: -10deg;
+    width: clamp(10rem, 15rem + 5vw, 25rem);
+    min-width: 10rem;
 }
+
 
 /* TEXT SECTION */
 
 .text-section {
-  grid-column: 1/-1;
+    grid-column: 1/-1;
 }
 
 .text-wrapper {
-  display: inline-block;
-  padding: 1rem;
+    display: inline-block;
+    padding: 1rem;
+}
+
+
+.printing {
+    font-family: "Museo Sans Bold";
+    margin: 2rem;
+    margin-left: 3rem;
+
 }
 
 .info {
-  background-color: var(--paper-pink);
+    background-color: var(--paper-pink);
 }
 
 .info h3 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
+
 .info span {
-  font-family: "Museo Sans Bold";
+    font-weight: 700;
 }
 
 .instagram {
-  padding: 0rem 0.5rem;
+    padding: 0rem .5rem;
 }
-.instagram-logo {
-  display: inline;
-  height: 5rem;
+.instagram-logo{
+    display: inline;
+    height: 5rem;
 }
 .instagram-link {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
+
+
 
 /* IMAGE */
 
 .doodle {
-  position: absolute;
-  mix-blend-mode: darken;
-  z-index: -1;
+    position: absolute;
+    mix-blend-mode: darken;
+    z-index: -1;
 }
 
 .circle-a-logo {
-  width: 7rem;
-  top: 2rem;
-  left: 2rem;
+    width: 7rem;
+    top: 2rem;
+    left: 2rem;
 }
 
 .afa {
-  width: 5rem;
-  right: 4rem;
-  bottom: 15%;
+    width: 5rem;
+    right: 4rem;
+    bottom: 15%;
+
 }
 
 @media screen and (max-width: 50rem) {
-  .container {
-    display: block;
-    margin-top: 0;
-    padding: 1rem;
-  }
+    .container {
+        display: block;
+        margin-top: 0;
+        padding: 1rem;
+    }
+    
+    .logo {
+        margin: auto;
+    }
 
-  .logo {
-    margin: auto;
-  }
-
-  .afa {
-    bottom: 5%;
-  }
+    .afa {
+        bottom: 5%
+    }
 }
